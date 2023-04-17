@@ -1,0 +1,331 @@
+.opacity-subliya-15 {
+    opacity: 50%;
+}
+.login-logo>a>img {
+    width: 343px;
+    height: 234px;
+}
+
+.bg-subliya-one {
+    background-color: #00DFFF;
+    /* opacity: 15%; */
+    height: 80px;
+    width: 100%;
+    margin-right: -7.5px;
+    margin-left: -7.5px;
+    border-radius: 0px 0px 100px 100px;
+    z-index: 4;
+    position: absolute;
+    left: 7.5px;
+    right: 0%;
+    top: -40px;
+    bottom: 0%;
+}
+
+.bg-subliya-two {
+    background-color: #FF0190;
+    /* opacity: 15%; */
+    height: 80px;
+    width: 100%;
+    margin-right: -7.5px;
+    margin-left: -7.5px;
+    border-radius: 0px 0px 97px 97px;
+    z-index: 3;
+    position: absolute;
+    left: 7.5px;
+    right: 0%;
+    top: 13.12%;
+    bottom: 0%;
+}
+
+.bg-subliya-three {
+    background-color: #FFF300;
+    /* opacity: 15%; */
+    height: 120px;
+    width: 100%;
+    margin-right: -7.5px;
+    margin-left: -7.5px;
+    border-radius: 0px 0px 97px 97px;
+    z-index: 2;
+    position: absolute;
+    left: 7.5px;
+    right: 0%;
+    top: 25.46%;
+    bottom: 0%;
+}
+
+.bg-subliya-four {
+    background-color: #060104;
+    /* opacity: 15%; */
+    height: 160px;
+    width: 100%;
+    margin-right: -7.5px;
+    margin-left: -7.5px;
+    border-radius: 0px 0px 97px 97px;
+    z-index: 1;
+    position: absolute;
+    left: 7.5px;
+    right: 0%;
+    top: 39.11%;
+    bottom: 0%;
+
+}
+
+/*  body */
+.margin-subliya-top-login {
+    margin-top: 160px;
+}
+
+.w-subliya {
+    width: -webkit-fill-available;
+}
+
+.w-subliya-body {
+    width: -webkit-fill-available;
+}
+
+.height-subliya-body {
+    height: 620px;
+    background-color: black;
+}
+
+/* footer */
+.bg-subliya-one-b {
+    /* background-color: #00DFFF; */
+    /* opacity: 15%; */
+    height: 40px;
+    width: 100%;
+    /* margin-right: 0px; */
+    /* margin-left: 0px; */
+    /* border-radius: 100px 100px 0px 0px; */
+    z-index: 4;
+    position: absolute;
+    /* left: 7.5px; */
+    /* right: 0px; */
+    top: 120px;
+    bottom: 0pxx;
+}
+
+.bg-subliya-two-b {
+    background-color: #FF0190;
+    /* opacity: 15%; */
+    height: 80px;
+    width: 100%;
+    margin-right: -7.5px;
+    margin-left: -7.5px;
+    border-radius: 97px 97px 0px 0px;
+    z-index: 3;
+    position: absolute;
+    left: 7.5px;
+    right: 0px;
+    top: 80px;
+    bottom: 0px;
+}
+
+.bg-subliya-three-b {
+    background-color: #FFF300;
+    /* opacity: 15%; */
+    height: 120px;
+    width: 100%;
+    margin-right: -7.5px;
+    margin-left: -7.5px;
+    border-radius: 97px 97px 0px 0px;
+    z-index: 2;
+    position: absolute;
+    left: 7.5px;
+    right: 0px;
+    top: 40px;
+    bottom: 0px;
+}
+
+.bg-subliya-four-b {
+    background-color: #060104;
+    /* opacity: 15%; */
+    height: 160px;
+    width: 100%;
+    margin-right: -7.5px;
+    margin-left: -7.5px;
+    border-radius: 97px 97px 0px 0px;
+    z-index: 1;
+    position: absolute;
+    left: 7.5px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+
+}
+
+/* login */
+.h-subliya-login {
+    height: 100vh;
+    margin-top: 160px !important;
+    margin-bottom: 20px !important;
+}
+
+.center-subliya-login {
+    align-self: center;
+}
+
+/* login title */
+
+.font-subliya-login {
+    font-family: 'Varela Rounded', sans-serif;
+
+    font-size: 2em;
+    font-weight: 800;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #170090;
+
+
+}
+
+.fonttwo-subliya-login {
+    font-family: "RobotoMono";
+    font-size: 1.8em;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #170090;
+}
+
+.bg-subliya-transparent-login {
+    background-color: #00DFFF00 !important;
+    border-top: 0px solid rgba(0, 0, 0, 0) !important;
+    border-bottom: 0px solid rgba(0, 0, 0, 0);
+    padding: 0.75rem 1.25rem;
+    position: relative;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0),
+        0 1px 3px rgba(0, 0, 0, 0) !important;
+}
+
+.input-form-login {
+    border: none !important;
+    border-bottom: 1px solid #211c1c !important;
+    border-radius: 0;
+    color: #211c1c;
+    line-height: 22px;
+
+}
+
+.input-form-login,
+textarea {
+    box-shadow: none !important;
+    outline: 0;
+}
+
+.p-subliya-button-form {
+    width: 139px;
+    height: 56px;
+    color: #000000;
+    font-family: 'RobotoMono';
+    border-radius: 20px !important;
+    border-color: #00000000 !important;
+    background-color: #FFF300 !important;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18.2556px;
+    line-height: 21px;
+    box-shadow: 4px 4px 0px #644801 !important;
+}
+
+a {
+    text-decoration: none !important;
+
+}
+
+a:hover {
+    text-decoration: underline !important;
+}
+
+.card-footer {
+    text-align: left !important;
+    margin-left: 62px;
+}
+
+/* body form */
+.rounded-subluya-bodyform {
+    border-radius: 49px !important;
+    box-shadow: 10px 8px 16px rgba(0, 0, 0, 0.60);
+}
+
+.mr-negative-subliya {
+    margin-left: -2.5rem !important;
+}
+
+/* Labels form login */
+
+.text-link-subliya {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 600 !important;
+    font-size: 20px !important;
+    line-height: 21px !important;
+    /* identical to box height */
+
+
+    color: #170090;
+}
+
+/* input form login */
+.inputcheckbox-subliya {
+    width: 20px;
+    height: 20px;
+    background: #D9D9D9;
+    opacity: 0.3;
+    box-shadow: 1px 1px 0px #000000;
+    border-radius: 3px;
+}
+
+.placeholderinput-subliya::placeholder {
+    font-family: 'RobotoMono';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+
+
+    color: #FF0000;
+
+    opacity: 0.2;
+}
+@media (max-width:991px) {
+    
+    .login-logo>a>img {
+        width: 200px;
+        height: 122px;
+    }
+    .font-subliya-login {
+        font-family: 'Varela Rounded', sans-serif;
+
+        font-size: 0.67em;
+        font-weight: 800;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #170090;
+
+
+    }
+    .fonttwo-subliya-login {
+        font-family: "RobotoMono";
+        font-size: 0.75em;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #170090;
+    }
+    .text-link-subliya {
+        font-size: 13px!important;
+    }
+    .fontsubliya {
+        font-size: 12px;
+    }
+
+}

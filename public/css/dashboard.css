@@ -1,0 +1,9 @@
+
+
+#designs_by_categories_or_subcategories_selects, .d-none-update-catalogs {
+    transition: 2s all ease-out;
+}
+.d-none-update-catalogs {
+    display: none;
+    transition: 2s all ease-out;
+}
