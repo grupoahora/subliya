@@ -13,7 +13,6 @@ use App\Http\Controllers\SubcategoryController;
 use Illuminate\Support\Facades\Route;
 
 
-
 Route::get('/', [HomeController::class, 'index']);
 Route::resource('categories', CategoryController::class)->names('categories');
 Route::resource('designs', DesignController::class)->names('designs');
