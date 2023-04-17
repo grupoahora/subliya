@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/contact', function () {
+Route::get('./contact', function () {
     return view('welcome');
 })->name('welcome');
 Route::get('/disenos', function () {
