@@ -23,6 +23,18 @@
                 </div>
                 <div class="d-flex flex-column justify-content-start align-items-center w-75 h-75">
                     <div class="me-auto py-4">
+                        <form class="" action="<?php echo e(route('get.by.name')); ?>" role="search"
+                            method="get" id="search-header">
+                            <?php echo csrf_field(); ?>
+                            <div class="input-group  ">
+                                <button class="btn btn-outline-secondary p-0 " type="submit" id="button-addon1" style="opacity: 0.7;border-color: #3c2779;border-radius: 15px 0px 0px 15px!important;border: 2px solid #000!important;"><img
+                                    src="<?php echo e(asset('svg/magnifying-glass.svg')); ?>" alt="" width="30px" height="auto"></button>
+                                <input type="text" class="form-control form-disenos" placeholder="Buscar Diseño" name="search"
+                                    aria-label="Example text with button addon" aria-describedby="button-addon1">
+                            </div>
+                            
+                        </form>
+                      
                         <label class="fw-bold py-2" for="filter">Filtrar Categoría:</label>
                         <select name="select-disenos" class="select-disenos" id="category_id" style="width: 100%"
                             name="" id="">

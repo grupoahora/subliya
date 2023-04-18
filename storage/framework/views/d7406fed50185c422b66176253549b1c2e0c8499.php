@@ -61,7 +61,7 @@
                             method="get" id="search-header">
                             <?php echo csrf_field(); ?>
                             <div class="input-group me-4  display-destock-search">
-                                <button class="btn btn-outline-secondary p-0" type="submit" id="button-addon1" style="border-color: #3c2779"><img
+                                <button class="btn btn-outline-secondary p-0" type="submit" id="button-addon1" style="  opacity: 0.7;border-color: #3c2779"><img
                                     src="<?php echo e(asset('svg/magnifying-glass.svg')); ?>" alt="" width="30px" height="auto"></button>
                                 <input type="text" class="form-control" placeholder="Buscar Diseño" name="search"
                                     aria-label="Example text with button addon" aria-describedby="button-addon1">
