@@ -41,6 +41,7 @@ Route::post('contactanos', [DashboardController::class, 'contactanos'])->name('c
     Mail::to('aantiinoo@gmail.com')->send($correo);
     return redirect()->route('welcome');
 }); */
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

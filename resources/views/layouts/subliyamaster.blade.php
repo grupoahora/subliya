@@ -27,7 +27,7 @@
     
         <nav class="navbar navbar-expand-lg  round-subliya-header">
             <div class="container">
-                <a class="navbar-brand" href="{{ route('get.detail.all') }}/#">
+                <a class="navbar-brand" href="{{ route('get.detail.all') }}#">
                     <!-- <img src="{{ asset(config('adminlte.logo_img')) }}" height="79" width="116"> -->
                     <img src="{{ asset('img/LOGO.png') }}" alt="" width="120" height="auto"
                         class="d-inline-block align-text-top">
@@ -44,11 +44,11 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link  active style-subliya-text" aria-current="page"
-                                href="{{ route('welcome') }}/#QuienesSomos">¿Quienes Somos?</a>
+                                href="{{ route('welcome') }}#QuienesSomos">¿Quienes Somos?</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link style-subliya-text"
-                                href="{{ route('welcome') }}/#Servicios">Servicios</a>
+                                href="{{ route('welcome') }}#Servicios">Servicios</a>
                         </li>
 
                         <li class="nav-item">
@@ -57,7 +57,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link style-subliya-text"
-                                href="{{ route('welcome') }}/#Contacto">Contacto</a>
+                                href="{{ route('welcome') }}#Contacto">Contacto</a>
                         </li>
                     </ul>
                     {{-- <form class="d-flex me-auto display-destock-search" action="{{ route('get.by.name') }}"
