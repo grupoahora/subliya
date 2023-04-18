@@ -12,7 +12,7 @@
 
             <div class="links d-flex flex-column justify-content-evenly align-items-center">
                 <div class="d-flex flex-column justify-content-end align-items-center w-75 h-25">
-                    <div class="bg-disenos text-center my-2 my-lg-0 w-100 ">
+                    <div class="bg-disenos text-center mt-2 my-lg-0 w-100 ">
                         @if (isset($categoryselect))
                             <h4 class=" text-white  my-auto" id="titleDesignsByCategory"> {{ $categoryselect->name }}</h4>
                         @else
@@ -22,7 +22,7 @@
 
                 </div>
                 <div class="d-flex flex-column justify-content-start align-items-center w-75 h-75">
-                    <div class="me-auto py-4">
+                    <div class="me-auto pt-4">
                         <form class="" action="{{ route('get.by.name') }}" role="search"
                             method="get" id="search-header">
                             @csrf
@@ -144,7 +144,7 @@
 
 
 
-        <div class="container-fluid width-designs me-sm-0 mx-auto">
+        <div class="container-fluid width-designs me-sm-0 mt-5 pt-5 mx-auto">
 
             <div class="row d-flex flex-row justify-content-center align-items-center card-group-disenos asdasdas">
                 @foreach ($designsweb as $design)
