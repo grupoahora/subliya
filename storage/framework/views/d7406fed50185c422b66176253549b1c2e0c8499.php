@@ -10,7 +10,6 @@
             font-family: "Marvelan";
             src: url("<?php echo e(asset('fonts/Smiley.ttf')); ?>");
         }
-        
     </style>
 
     <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>">
@@ -24,55 +23,65 @@
 </head>
 
 <body>
-    
-        <nav class="navbar navbar-expand-lg  round-subliya-header">
-            <div class="container">
-                <a class="navbar-brand" href="<?php echo e(route('get.detail.all')); ?>/#">
-                    <!-- <img src="<?php echo e(asset(config('adminlte.logo_img'))); ?>" height="79" width="116"> -->
-                    <img src="<?php echo e(asset('img/LOGO.png')); ?>" alt="" width="120" height="auto"
-                        class="d-inline-block align-text-top">
-                </a>
+
+    <nav class="navbar navbar-expand-lg  round-subliya-header">
+        <div class="container">
+            <a class="navbar-brand" href="<?php echo e(route('get.detail.all')); ?>#">
+                <!-- <img src="<?php echo e(asset(config('adminlte.logo_img'))); ?>" height="79" width="116"> -->
+                <img src="<?php echo e(asset('img/LOGO.png')); ?>" alt="" width="100" height="auto"
+                    class="d-inline-block ms-3 ms-lg-5  align-text-top">
+            </a>
 
 
-                <div class="bars__menu" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="line1__bars-menu"></span>
-                    <span class="line2__bars-menu"></span>
-                    <span class="line3__bars-menu"></span>
-                </div>
-                <div class="collapse navbar-collapse  " id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link  active style-subliya-text" aria-current="page"
-                                href="<?php echo e(route('welcome')); ?>/#QuienesSomos">¿Quienes Somos?</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link style-subliya-text"
-                                href="<?php echo e(route('welcome')); ?>/#Servicios">Servicios</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link   style-subliya-text"
-                                href="<?php echo e(route('get.detail.all')); ?>">Catálogo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link style-subliya-text"
-                                href="<?php echo e(route('welcome')); ?>/#Contacto">Contacto</a>
-                        </li>
-                    </ul>
-                    
-                    
-                </div>
+            <div class="bars__menu" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="line1__bars-menu"></span>
+                <span class="line2__bars-menu"></span>
+                <span class="line3__bars-menu"></span>
             </div>
-        </nav>
-    
+            <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link  active style-subliya-text" aria-current="page"
+                            href="<?php echo e(route('welcome')); ?>#QuienesSomos">¿Quienes Somos?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link style-subliya-text" href="<?php echo e(route('welcome')); ?>#Servicios">Servicios</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link   style-subliya-text" href="<?php echo e(route('get.detail.all')); ?>">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link style-subliya-text" href="<?php echo e(route('welcome')); ?>#Contacto">Contacto</a>
+                    </li>
+                    <li class="nav-item mx-4">
+
+                        <form class="d-flex ms-auto display-destock-search" style="width: 200px" action="<?php echo e(route('get.by.name')); ?>" role="search"
+                            method="get" id="search-header">
+                            <?php echo csrf_field(); ?>
+                            <div class="input-group me-4  display-destock-search">
+                                <button class="btn btn-outline-secondary p-0" type="submit" id="button-addon1" style="border-color: #3c2779"><img
+                                    src="<?php echo e(asset('svg/magnifying-glass.svg')); ?>" alt="" width="30px" height="auto"></button>
+                                <input type="text" class="form-control" placeholder="Buscar Diseño" name="search"
+                                    aria-label="Example text with button addon" aria-describedby="button-addon1">
+                            </div>
+                            
+                        </form>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
     <?php echo $__env->yieldContent('header'); ?>
     <?php echo $__env->yieldContent('contentbody'); ?>
 
     <div class="footer bg-black ">
         <a href="https://www.instagram.com/subliyasd/" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-border icon-tabler-brand-instagram" width="24"
-                height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-border icon-tabler-brand-instagram"
+                width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <rect x="4" y="4" width="16" height="16" rx="4" />
@@ -98,8 +107,9 @@
         </a>
 
     </div>
-    <button  id="back-to-top" class=" landing-back-top"><img src="<?php echo e(asset('img/wp.png')); ?>" width="60px" height="auto" alt=""></button>
-</div>
+    <button id="back-to-top" class=" landing-back-top"><img src="<?php echo e(asset('img/wp.png')); ?>" width="60px"
+            height="auto" alt=""></button>
+    </div>
     <script src="<?php echo e(asset('js/jQuery-v3.3.1.min.js')); ?>"></script>
     <script src="<?php echo e(asset('js/script.js')); ?>"></script>
     <script src="<?php echo e(asset('js/burger.js')); ?>"></script>
@@ -113,10 +123,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
         integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
     </script>
-    
+
     <script>
         const wp = $('#back-to-top');
-        wp.click(function(){
+        wp.click(function() {
             window.open('https://wa.me/message/3F33KG3IEVX5I1', 'WhastApp Subliya');
         });
     </script>

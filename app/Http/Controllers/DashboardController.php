@@ -90,10 +90,13 @@ class DashboardController extends Controller
     }
     public function get_by_name(Request $request)
     {
-        $busqueda = $request->search;
-        $designsbycategorys = Design::where('name', 'LIKE', '%' . $busqueda . '%')->paginate(15);
         /* dd($request); */
-        return view('web.disenos', compact('designsbycategorys', 'busqueda'));
+        $busqueda = $request->search;
+        $view = $request->view == null ? 0 : $request->view;
+        $designsweb = Design::where('name', 'LIKE', '%' . $busqueda . '%')->paginate(15);
+        
+        /* dd($request); */
+        return view('web.disenos', compact('designsweb', 'busqueda','view'));
     }
     public function get_designs_by_category(Request $request, $category)
     {
