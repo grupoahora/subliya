@@ -13,16 +13,18 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
+use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\File;
 
 class DashboardController extends Controller
 {
     public function contactanos(Request $request)
     {
         $data = $request;
-       /*  dd($request); */
+        /*  dd($request); */
         /* $correo = ; */
         Mail::to('aantiinoo@gmail.com')->send(new ContactanosMailable($data));
-        return back()->with('messagecontactanos','ok');
+        return back()->with('messagecontactanos', 'ok');
     }
     public function get_designs_by_subcategory(Request $request)
     {
@@ -39,16 +41,16 @@ class DashboardController extends Controller
         $subcategories =  Category::find($request->category)->subcategories;
         return $subcategories;
     }
-    
+
     public function get_detail_all(Request $request)
     {
-        
-        $view = $request->view == null ? 0: $request->view;
-        
-       /*  dd($view); */
+
+        $view = $request->view == null ? 0 : $request->view;
+
+        /*  dd($view); */
         $designsweb = Design::paginate(15);
-               /*  $view->with('designsweb', $designsweb); */
-       return view('web.disenos', compact('designsweb', 'view'));
+        /*  $view->with('designsweb', $designsweb); */
+        return view('web.disenos', compact('designsweb', 'view'));
     }
     public function redessociales(Request $request)
     {
@@ -59,12 +61,11 @@ class DashboardController extends Controller
             'whatsapp' => $request->Whatsapp,
         ]);
         return back()->with('info', 'Configuración se actualizo');
-
     }
     public function renewpass(Request $request)
     {
-      /*   dd($request); */
-        
+        /*   dd($request); */
+
         $iduser = Auth()->user();
         $user = User::find($iduser->id);
         /* dd($user); */
@@ -77,16 +78,13 @@ class DashboardController extends Controller
                 return back()->with('info', 'contraseña no conincide');
             }
             return back()->with('info', 'contraseña se actualizo');
-            
-            
         } else {
             return back()->with('info', 'contraseña anterior no coincide');
         }
-        
+
         /* dd($request); */
-       /*  Hash::check($request['old_pass'], $user->password); */
-       /*  dd(Hash::check($request['old_pass'], $user->password)); */
-       
+        /*  Hash::check($request['old_pass'], $user->password); */
+        /*  dd(Hash::check($request['old_pass'], $user->password)); */
     }
     public function get_by_name(Request $request)
     {
@@ -94,9 +92,9 @@ class DashboardController extends Controller
         $busqueda = $request->search;
         $view = $request->view == null ? 0 : $request->view;
         $designsweb = Design::where('name', 'LIKE', '%' . $busqueda . '%')->paginate(15);
-        
+
         /* dd($request); */
-        return view('web.disenos', compact('designsweb', 'busqueda','view'));
+        return view('web.disenos', compact('designsweb', 'busqueda', 'view'));
     }
     public function get_designs_by_category(Request $request, $category)
     {
@@ -143,42 +141,69 @@ class DashboardController extends Controller
     }
     public function upload_image(Request $request, $id)
     {
-
         if ($request->ajax()) {
             $design = Design::find($id);
             $urlimages = [];
-            $filesLink = array();
+            $filesLink = [];
             if ($request->hasFile('files')) {
                 $images = $request->file('files');
                 foreach ($images as $key => $image) {
                     $image_name = time() . '_' . $image->getClientOriginalName();
-                    $ruta = public_path() . '/image/';
+                    $ruta = public_path('image/');
+                    $imagePath = $ruta . $image_name;
+
+                    // Guardar la imagen original
                     $image->move($ruta, $image_name);
-                    $urlimages[]['url'] = '/image/' . $image_name;;
-                    $url = '/image/' . $image_name;
-                    array_push($filesLink, $url);
+
+                    // Verificar si la imagen es legible
+                    if (File::isReadable($imagePath)) {
+                        // Convertir la imagen al formato WebP
+                        $webpPath = $ruta . pathinfo($image_name, PATHINFO_FILENAME) . '.webp';
+                        Image::make($imagePath)->encode('webp', 75)->save($webpPath);
+
+                        // Guardar la URL de la imagen convertida
+                        $urlimages[]['url'] = '/image/' . pathinfo($webpPath, PATHINFO_BASENAME);
+                        $url = '/image/' . pathinfo($webpPath, PATHINFO_BASENAME);
+                        array_push($filesLink, $url);
+                    } else {
+                        // La imagen no es legible, realizar acciones de manejo de errores si es necesario
+                    }
                 }
             }
             $design->records()->createMany($urlimages);
             return $filesLink;
         }
     }
+
     public function upload_image_category(Request $request, $id)
     {
-
         if ($request->ajax()) {
             $category = Category::find($id);
             $urlimages = [];
-            $filesLink = array();
+            $filesLink = [];
             if ($request->hasFile('files')) {
                 $images = $request->file('files');
                 foreach ($images as $key => $image) {
                     $image_name = time() . '_' . $image->getClientOriginalName();
-                    $ruta = public_path() . '/image/';
+                    $ruta = public_path('image/');
+                    $imagePath = $ruta . $image_name;
+
+                    // Guardar la imagen original
                     $image->move($ruta, $image_name);
-                    $urlimages[]['url'] = '/image/' . $image_name;;
-                    $url = '/image/' . $image_name;
-                    array_push($filesLink, $url);
+
+                    // Verificar si la imagen es legible
+                    if (File::isReadable($imagePath)) {
+                        // Convertir la imagen al formato WebP
+                        $webpPath = $ruta . pathinfo($image_name, PATHINFO_FILENAME) . '.webp';
+                        Image::make($imagePath)->encode('webp', 75)->save($webpPath);
+
+                        // Guardar la URL de la imagen convertida
+                        $urlimages[]['url'] = '/image/' . pathinfo($webpPath, PATHINFO_BASENAME);
+                        $url = '/image/' . pathinfo($webpPath, PATHINFO_BASENAME);
+                        array_push($filesLink, $url);
+                    } else {
+                        // La imagen no es legible, realizar acciones de manejo de errores si es necesario
+                    }
                 }
             }
             $category->records()->createMany($urlimages);
