@@ -28,13 +28,13 @@
         <div class="container">
             <a class="navbar-brand" href="{{ route('get.detail.all') }}#">
                 <!-- <img src="{{ asset(config('adminlte.logo_img')) }}" height="79" width="116"> -->
-                <img src="{{ asset('img/LOGO.webp') }}" alt="" 
+                <img src="{{ asset('img/LOGO.webp') }}" alt=""
                     class="d-inline-block ms-3 ms-lg-5  align-text-top">
             </a>
 
 
             <div class="bars__menu" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarSupportedContent" aria-expanded="false" >
                 <span class="line1__bars-menu"></span>
                 <span class="line2__bars-menu"></span>
                 <span class="line3__bars-menu"></span>
