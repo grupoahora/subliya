@@ -160,8 +160,12 @@ class DashboardController extends Controller
                     // Verificar si la imagen es legible
                     if (File::isReadable($imagePath)) {
                         // Convertir la imagen al formato WebP
+                        $imageweb = Image::make($imagePath)->encode('webp', 75);
+                        $imageweb->fit(600, 600); // Redimensionar imagen a 150px x 150px
                         $webpPath = $ruta . pathinfo($image_name, PATHINFO_FILENAME) . '.webp';
-                        Image::make($imagePath)->encode('webp', 75)->save($webpPath);
+
+
+                        $imageweb->save($webpPath);
 
                         // Guardar la URL de la imagen convertida
                         $urlimages[]['url'] = '/image/' . pathinfo($webpPath, PATHINFO_BASENAME);
@@ -196,8 +200,12 @@ class DashboardController extends Controller
                     // Verificar si la imagen es legible
                     if (File::isReadable($imagePath)) {
                         // Convertir la imagen al formato WebP
+                        $imageweb = Image::make($imagePath)->encode('webp', 75);
+                        $imageweb->fit(600, 600); // Redimensionar imagen a 150px x 150px
                         $webpPath = $ruta . pathinfo($image_name, PATHINFO_FILENAME) . '.webp';
-                        Image::make($imagePath)->encode('webp', 75)->save($webpPath);
+
+
+                        $imageweb->save($webpPath);
 
                         // Guardar la URL de la imagen convertida
                         $urlimages[]['url'] = '/image/' . pathinfo($webpPath, PATHINFO_BASENAME);
