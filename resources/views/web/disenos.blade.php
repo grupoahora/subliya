@@ -82,7 +82,7 @@
 
                     <div class="d-flex justify-content-end align-items-end w-100 py-4">
                         <div class=" icon-disenos">
-                            <button
+                            <button aria-label="icon-disenos-onsection"
                                 class="@if ($view == 0) icon-disenos-onsection @else icon-disenos-offsection @endif  mx-3 "
                                 id="icon-disenos-onsection" onclick="changeSection(0)"
                                 @if ($view == 0) disabled @else @endif>
@@ -116,7 +116,7 @@
                                         fill="" />
                                 </svg>
                             </button>
-                            <button
+                            <button aria-label="icon-disenos-offsection"
                                 class="@if ($view == 0) icon-disenos-offsection @else icon-disenos-onsection @endif "
                                 id="icon-disenos-offsection" onclick="changeSection(1)"
                                 @if ($view == 1) disabled @else @endif>

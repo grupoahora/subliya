@@ -113,7 +113,7 @@
         </a>
 
     </div>
-    <button id="back-to-top" class=" landing-back-top"><img src="{{ asset('img/wp.png') }}" width="60px"
+    <button id="back-to-top" aria-label="back-to-top" class=" landing-back-top"><img src="{{ asset('img/wp.png') }}" width="60px"
             height="auto" alt=""></button>
     </div>
     <script src="{{ asset('js/jQuery-v3.3.1.min.js') }}"></script>
