@@ -28,7 +28,7 @@
         <div class="container">
             <a class="navbar-brand" href="{{ route('get.detail.all') }}#">
                 <!-- <img src="{{ asset(config('adminlte.logo_img')) }}" height="79" width="116"> -->
-                <img src="{{ asset('img/LOGO.png') }}" alt="" width="100" height="auto"
+                <img src="{{ asset('img/LOGO.webp') }}" alt="" width="100" height="auto"
                     class="d-inline-block ms-3 ms-lg-5  align-text-top">
             </a>
 

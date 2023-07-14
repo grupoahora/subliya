@@ -14,7 +14,7 @@ class ConvertImagesToWebP extends Command
 
     public function handle()
     {
-        $directory = public_path('image');
+        $directory = public_path('img/logo');
         $files = File::files($directory);
 
         foreach ($files as $file) {
