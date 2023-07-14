@@ -28,7 +28,7 @@
         <div class="container">
             <a class="navbar-brand" href="<?php echo e(route('get.detail.all')); ?>#">
                 <!-- <img src="<?php echo e(asset(config('adminlte.logo_img'))); ?>" height="79" width="116"> -->
-                <img src="<?php echo e(asset('img/LOGO.webp')); ?>" alt="" width="50" height="auto"
+                <img src="<?php echo e(asset('img/LOGO.webp')); ?>" alt="" 
                     class="d-inline-block ms-3 ms-lg-5  align-text-top">
             </a>
 
