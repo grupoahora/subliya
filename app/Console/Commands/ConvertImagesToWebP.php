@@ -10,17 +10,24 @@ class ConvertImagesToWebP extends Command
 {
     protected $signature = 'images:convert';
 
-    protected $description = 'Convert images to WebP format';
+    protected $description = 'Convert images to WebP format, resize to 150px x 150px, and delete originals';
 
     public function handle()
     {
-        $directory = public_path('img/logo');
+        $directory = public_path('image');
         $files = File::files($directory);
 
         foreach ($files as $file) {
             $image = Image::make($file);
-            $image->encode('webp');
-            $image->save($directory . '/' . pathinfo($file, PATHINFO_FILENAME) . '.webp');
+            $image->fit(600, 600); // Redimensionar imagen a 150px x 150px
+
+            $webpPath = $directory . '/' . pathinfo($file, PATHINFO_FILENAME) . '.webp';
+            $image->save($webpPath);
+
+          
+            
+
+            $this->info('Image converted and resized: ' . $webpPath);
         }
 
         $this->info('Images converted successfully!');
