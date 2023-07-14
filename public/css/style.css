@@ -458,7 +458,7 @@ h4 {
 
 .navbar-container {
 
-    /*  width: 320px; */
+     width: 320px;
     background-color: initial;
     /* position: fixed; */
     top: 0;
