@@ -210,11 +210,24 @@
                         <a class="page-link"
                             href="http://subliya.com/get_detail_all?page={{ $designsweb->links()->paginator->currentPage() - 1 }}&view={{ $view }}">Anterior</a>
                     </li>
-                    @foreach ($designsweb->links()->elements[0] as $key => $item)
+                    {{-- @php
+                        dd($designsweb->currentPage());
+                    @endphp --}}
+                    @for ($i = $designsweb->currentPage(); $i <= $designsweb->lastPage(); $i++)
+                    @if ($i <= $designsweb->currentPage() + 10)
+                         <li class="page-item"><a class="page-link"
+                                href="?page={{ $i }}&view={{ $view }}">{{ $i }}</a>
+                        </li>
+                    @else
+                        
+                    @endif
+                        
+                    @endfor
+                   {{--  @foreach ($designsweb->links()->elements[0] as $key => $item)
                         <li class="page-item"><a class="page-link"
                                 href="{{ $item }}&view={{ $view }}">{{ $key }}</a>
                         </li>
-                    @endforeach
+                    @endforeach --}}
 
                     <li class="page-item">
                         @if ($designsweb->links()->paginator->currentPage() + 1 >= $designsweb->links()->paginator->lastPage())

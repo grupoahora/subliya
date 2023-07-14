@@ -208,21 +208,28 @@
                 <ul class="pagination d-flex flex-wrap "id="pagination">
                     <li class="page-item">
                         <a class="page-link"
-                            href="http://subliya.com.test/get_detail_all?page=<?php echo e($designsweb->links()->paginator->currentPage() - 1); ?>&view=<?php echo e($view); ?>">Anterior</a>
+                            href="http://subliya.com/get_detail_all?page=<?php echo e($designsweb->links()->paginator->currentPage() - 1); ?>&view=<?php echo e($view); ?>">Anterior</a>
                     </li>
-                    <?php $__currentLoopData = $designsweb->links()->elements[0]; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <li class="page-item"><a class="page-link"
-                                href="<?php echo e($item); ?>&view=<?php echo e($view); ?>"><?php echo e($key); ?></a>
+                    
+                    <?php for($i = $designsweb->currentPage(); $i <= $designsweb->lastPage(); $i++): ?>
+                    <?php if($i <= $designsweb->currentPage() + 10): ?>
+                         <li class="page-item"><a class="page-link"
+                                href="?page=<?php echo e($i); ?>&view=<?php echo e($view); ?>"><?php echo e($i); ?></a>
                         </li>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    <?php else: ?>
+                        
+                    <?php endif; ?>
+                        
+                    <?php endfor; ?>
+                   
 
                     <li class="page-item">
                         <?php if($designsweb->links()->paginator->currentPage() + 1 >= $designsweb->links()->paginator->lastPage()): ?>
                             <a class="page-link"
-                                href="http://subliya.com.test/get_detail_all?page=<?php echo e($designsweb->links()->paginator->lastPage()); ?>&view=<?php echo e($view); ?>">Siguiente</a>
+                                href="http://subliya.com/get_detail_all?page=<?php echo e($designsweb->links()->paginator->lastPage()); ?>&view=<?php echo e($view); ?>">Siguiente</a>
                         <?php else: ?>
                             <a class="page-link"
-                                href="http://subliya.com.test/get_detail_all?page=<?php echo e($designsweb->links()->paginator->currentPage() + 1); ?>&view=<?php echo e($view); ?>">Siguiente</a>
+                                href="http://subliya.com/get_detail_all?page=<?php echo e($designsweb->links()->paginator->currentPage() + 1); ?>&view=<?php echo e($view); ?>">Siguiente</a>
                         <?php endif; ?>
                     </li>
                 </ul>

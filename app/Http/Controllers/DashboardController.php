@@ -49,6 +49,8 @@ class DashboardController extends Controller
 
         /*  dd($view); */
         $designsweb = Design::paginate(15);
+        /* dd($designsweb);
+ */
         /*  $view->with('designsweb', $designsweb); */
         return view('web.disenos', compact('designsweb', 'view'));
     }
