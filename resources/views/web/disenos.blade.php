@@ -208,7 +208,7 @@
                 <ul class="pagination d-flex flex-wrap "id="pagination">
                     <li class="page-item">
                         <a class="page-link"
-                            href="http://subliya.com.test/get_detail_all?page={{ $designsweb->links()->paginator->currentPage() - 1 }}&view={{ $view }}">Anterior</a>
+                            href="http://subliya.com/get_detail_all?page={{ $designsweb->links()->paginator->currentPage() - 1 }}&view={{ $view }}">Anterior</a>
                     </li>
                     @foreach ($designsweb->links()->elements[0] as $key => $item)
                         <li class="page-item"><a class="page-link"
@@ -219,10 +219,10 @@
                     <li class="page-item">
                         @if ($designsweb->links()->paginator->currentPage() + 1 >= $designsweb->links()->paginator->lastPage())
                             <a class="page-link"
-                                href="http://subliya.com.test/get_detail_all?page={{ $designsweb->links()->paginator->lastPage() }}&view={{ $view }}">Siguiente</a>
+                                href="http://subliya.com/get_detail_all?page={{ $designsweb->links()->paginator->lastPage() }}&view={{ $view }}">Siguiente</a>
                         @else
                             <a class="page-link"
-                                href="http://subliya.com.test/get_detail_all?page={{ $designsweb->links()->paginator->currentPage() + 1 }}&view={{ $view }}">Siguiente</a>
+                                href="http://subliya.com/get_detail_all?page={{ $designsweb->links()->paginator->currentPage() + 1 }}&view={{ $view }}">Siguiente</a>
                         @endif
                     </li>
                 </ul>
