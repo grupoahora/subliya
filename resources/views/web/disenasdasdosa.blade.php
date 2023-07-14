@@ -15,7 +15,7 @@
 
 
                 <div class="bars__menu" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" >
+                     >
                     <span class="line1__bars-menu"></span>
                     <span class="line2__bars-menu"></span>
                     <span class="line3__bars-menu"></span>
