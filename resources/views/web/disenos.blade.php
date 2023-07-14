@@ -27,7 +27,7 @@
                             method="get" id="search-header">
                             @csrf
                             <div class="input-group  ">
-                                <button class="btn btn-outline-secondary p-0 " type="submit" id="button-addon1" style="opacity: 0.7;border-color: #3c2779;border-radius: 15px 0px 0px 15px!important;border: 2px solid #000!important;"><img
+                                <button class="btn btn-outline-secondary p-0 " type="submit" id="button-addon1" aria-label="button-addon1" style="opacity: 0.7;border-color: #3c2779;border-radius: 15px 0px 0px 15px!important;border: 2px solid #000!important;"><img
                                     src="{{asset('svg/magnifying-glass.svg')}}" alt="" width="30px" height="auto"></button>
                                 <input type="text" class="form-control form-disenos" placeholder="Buscar Diseño" name="search"
                                     aria-label="Example text with button addon" aria-describedby="button-addon1">
@@ -37,7 +37,7 @@
                             <input class="form-group me-auto display-destock-search" type="search" name="search"
                                 placeholder="Search" aria-label="Search"> --}}
                         </form>
-                      
+
                         <label class="fw-bold py-2" for="filter">Filtrar Categoría:</label>
                         <select name="select-disenos" class="select-disenos" id="category_id" style="width: 100%"
                             name="" id="">
@@ -219,9 +219,9 @@
                                 href="?page={{ $i }}&view={{ $view }}">{{ $i }}</a>
                         </li>
                     @else
-                        
+
                     @endif
-                        
+
                     @endfor
                    {{--  @foreach ($designsweb->links()->elements[0] as $key => $item)
                         <li class="page-item"><a class="page-link"
@@ -292,7 +292,7 @@
             offsection.toggleClass('icon-disenos-offsection');
             /*  for (let index = 0; index < pagination.length; index++) {
                     pagination[i].setAttribute('href', hijos[i].getAttribute('href') + '');
-                    
+
                 } */
             for (let index = 0; index < desings.length; index++) {
 
